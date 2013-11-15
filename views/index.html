@@ -1,0 +1,23 @@
+<h2>Upcoming Shows</h2>
+
+<ol>
+$for(day in @)$
+  <li>
+    <h3>$formatTime("%D", day.date)$</h3>
+    <ol>
+      $for(show in day.shows)$
+      <li>
+        <p>
+          $for(band in show.bands)$
+          $band$$sep$,
+          $endfor$,
+          <time>$formatTime("%l:%m%P", show.time)$</time>
+          at <a href="https://maps.google.com/?q=$show.venue.address$, San Francisco" title="$show.venue.address$">$show.venue.name$</a>
+        </p>
+      </li>
+      $endfor$
+    </ol>
+  </li>
+$endfor$
+</ol>
+
