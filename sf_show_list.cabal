@@ -8,11 +8,12 @@ cabal-version:       >=1.8
 
 executable sf_show_list
   main-is: Main.hs
-  ghc-options: -threaded -O2 -Wall
+  ghc-options: -O2 -Wall
   build-depends:
     base
     , aeson
     , transformers
+    , old-locale
     , postgresql-orm
     , simple >= 0.6.0
     , simple-postgresql-orm
@@ -23,6 +24,7 @@ executable sf_show_list
     , vector
     , wai
     , wai-extra
+    , wai-middleware-static
     , warp
     , postgresql-simple
 

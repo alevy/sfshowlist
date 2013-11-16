@@ -19,7 +19,7 @@ showsController = routeREST $ rest $ do
     withConnection $ \db -> do
       now <- liftIO $ getZonedTime
       shows <- liftIO $ dbSelect db $ setOrderBy "time asc"
-                                 --   $ addWhere "time >= ?" [now]
+                                    $ addWhere "time >= ?" [now]
                                     $ modelDBSelect
       render "index.html" $ groupShows shows
 

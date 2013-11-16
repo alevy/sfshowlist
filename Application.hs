@@ -2,6 +2,7 @@
 module Application where
 
 import SfShowList.Common
+import Network.Wai.Middleware.Static
 import Web.Simple
 
 import SfShowList.Controllers.Shows
@@ -12,4 +13,5 @@ app runner = do
 
   runner $ controllerApp settings $ do
     showsController
+    fromApp $ staticPolicy (addBase "static") $ const $ return notFound
 

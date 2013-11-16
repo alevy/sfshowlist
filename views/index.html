@@ -1,12 +1,12 @@
 <h2>Upcoming Shows</h2>
 
-<ol>
+<ol id="showlist">
 $for(day in @)$
-  <li>
-    <h3>$formatTime("%D", day.date)$</h3>
+  <li class="day">
+    <h3>$formatTime("%A, %b %e, %Y", day.date)$</h3>
     <ol>
       $for(show in day.shows)$
-      <li>
+      <li class="show">
         <p>
           $for(band in show.bands)$
           $band$$sep$,
