@@ -5,11 +5,12 @@ import Database.PostgreSQL.Simple
 up :: Connection -> IO ()
 up = migrate $
   create_table "show"
-  [ column "id" "serial PRIMARY KEY"
-  , column "bands" "text[] NOT NULL"
-  , column "venue" "json NOT NULL"
-  , column "notes" "text"
-  , column "time" "timestamptz NOT NULL"]
+    [ column "id" "serial PRIMARY KEY"
+    , column "bill" "text NOT NULL"
+    , column "venue" "text NOT NULL"
+    , column "display_notes" "text"
+    , column "provenance" "text"
+    , column "time" "timestamptz NOT NULL" ]
 
 down :: Connection -> IO ()
 down = migrate $ do
