@@ -4,3 +4,8 @@ dist/
 *.hi
 *.o
 db/development
+
+
+.DS_Store
+notes.txt
+
