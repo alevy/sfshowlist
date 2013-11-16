@@ -10,7 +10,8 @@ up = migrate $
     , column "venue" "text NOT NULL"
     , column "display_notes" "text"
     , column "provenance" "text"
-    , column "time" "timestamptz NOT NULL" ]
+    , column "time" "time"
+    , column "date" "date NOT NULL"]
 
 down :: Connection -> IO ()
 down = migrate $ do

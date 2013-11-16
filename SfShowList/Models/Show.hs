@@ -16,7 +16,7 @@ data Show = Show
   , showVenue :: Text
   , showDisplayNotes :: Maybe Text
   , showProvenance :: Maybe Text
-  , showTime :: TimeOfDay
+  , showTime :: Maybe TimeOfDay
   , showDate :: Day
   } deriving (Prelude.Show, Generic)
 
