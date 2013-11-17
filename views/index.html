@@ -8,9 +8,7 @@ $for(day in @)$
       $for(show in day.shows)$
       <li class="show">
         <p>
-          $for(band in show.bands)$
-          $band$$sep$,
-          $endfor$
+          $show.bill$,
           $if(show.time)$
           <time>$formatTime("%l:%M%P", show.time)$</time>
           $endif$

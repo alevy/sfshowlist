@@ -22,9 +22,10 @@ data Show = Show
 
 instance ToJSON Show where
   toJSON sh = object [ "id" .= showId sh
-                     , "bands" .= showBill sh
+                     , "bill" .= showBill sh
                      , "venue" .= showVenue sh
                      , "display_notes" .= showDisplayNotes sh
+                     , "provenance" .= showProvenance sh
                      , "date" .= dayToZonedTime (showDate sh)
                      , "time" .= showZonedTime sh ]
 

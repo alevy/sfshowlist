@@ -1,0 +1,50 @@
+<h2>New Show Listing</h2>
+
+<form action="/" method="POST" acceptCharset="UTF-8">
+  <p>
+    <label for="bill">
+      Bill:
+    </label>
+    <input type="text" name="bill" id="bill"/>
+  </p>
+
+  <p>
+    <label for="venue">
+      Venue:
+    </label>
+    <input type="text" name="venue" id="venue"
+      placeholder="Name (address)"/>
+  </p>
+
+  <p>
+    <label for="date">
+      Date:
+    </label>
+    <input type="date" name="date" id="date"/>
+  </p>
+
+  <p>
+    <label for="time">
+      Time:
+    </label>
+    <input type="time" name="time" id="time" value="19:00"/>
+  </p>
+
+  <p>
+    <label for="display_notes">
+      Display Notes:
+    </label>
+    <textarea name="display_notes" id="display_notes"
+      placeholder="21+,free"></textarea>
+  </p>
+
+  <p>
+    <label for="provenance">
+      Provenance:
+    </label>
+    <input type="text" name="provenance" id="provenance"
+      placeholder="venue mailing list..."/>
+  </p>
+  <input type="submit" value="Create Listing"/>
+</form>
+

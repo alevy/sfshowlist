@@ -12,6 +12,7 @@ app runner = do
   settings <- newAppSettings
 
   runner $ controllerApp settings $ do
-    showsController
+    routeTop showsController
+    routeName "shows" adminController
     fromApp $ staticPolicy (addBase "static") $ const $ return notFound
 
