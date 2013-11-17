@@ -3,6 +3,7 @@ module SfShowList.Controllers.Shows where
 
 import Prelude hiding (Show, shows)
 
+import Control.Applicative
 import Control.Monad.IO.Class
 import Data.Time
 import Database.PostgreSQL.ORM
@@ -17,9 +18,9 @@ showsController :: Controller AppSettings ()
 showsController = routeREST $ rest $ do
   index $ do
     withConnection $ \db -> do
-      now <- liftIO $ getZonedTime
-      shows <- liftIO $ dbSelect db $ setOrderBy "time asc"
-                                    $ addWhere "time >= ?" [now]
+      today <- liftIO $ localDay . zonedTimeToLocalTime <$> getZonedTime
+      shows <- liftIO $ dbSelect db $ setOrderBy "date asc, time asc"
+                                    $ addWhere "date >= ?" [today]
                                     $ modelDBSelect
       render "index.html" $ groupShows shows
 

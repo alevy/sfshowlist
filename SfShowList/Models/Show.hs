@@ -24,8 +24,14 @@ instance ToJSON Show where
   toJSON sh = object [ "id" .= showId sh
                      , "bands" .= showBill sh
                      , "venue" .= showVenue sh
-                     , "date" .= dayToZonedTime (showDate sh) ]
-                     
+                     , "display_notes" .= showDisplayNotes sh
+                     , "date" .= dayToZonedTime (showDate sh)
+                     , "time" .= showZonedTime sh ]
+
+showZonedTime :: Show -> Maybe ZonedTime
+showZonedTime sh =
+  fmap (\t -> ZonedTime (LocalTime (showDate sh) t) utc)
+       (showTime sh)
 
 instance Model Show where
   modelInfo = underscoreModelInfo "show"

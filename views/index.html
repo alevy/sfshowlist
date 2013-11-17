@@ -10,9 +10,12 @@ $for(day in @)$
         <p>
           $for(band in show.bands)$
           $band$$sep$,
-          $endfor$,
-          <time>$formatTime("%l:%m%P", show.time)$</time>
-          at <a href="https://maps.google.com/?q=$show.venue.address$, San Francisco" title="$show.venue.address$">$show.venue.name$</a>
+          $endfor$
+          $if(show.time)$
+          <time>$formatTime("%l:%M%P", show.time)$</time>
+          $endif$
+          at $show.venue$
+          $if(show.display_notes)$($show.display_notes$)$endif$
         </p>
       </li>
       $endfor$
