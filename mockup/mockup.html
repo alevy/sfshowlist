@@ -1,0 +1,394 @@
+<!DOCTYPE HTML>
+<html>
+
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>SF Showlist</title>
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- CSS
+  ================================================== -->
+  <link rel="stylesheet" href="stylesheets/base.css">
+  <link rel="stylesheet" href="stylesheets/skeleton.css">
+  <link rel="stylesheet" href="stylesheets/layout.css">
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- Favicons
+  ================================================== 
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">-->
+  <style type="text/css" media=screen>
+    @font-face {
+      font-family: 'blahblah';
+      src: url('blahblah.ttf');
+    }
+    html {
+      font-family: 'blahblah', 'Georgia', serif;
+    }
+    hr {color: #ff9900; height: 1px }
+    a:hover {color: #ff0000; text-decoration: none}
+
+    body {
+      width: 800px;
+      margin: 0 auto;
+    }
+    ol {
+      list-style: none;
+      padding: 0px;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    h1 a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    #showlist .day h3 {
+      border-bottom: 1px solid #ccc;
+    }
+
+    .day > ol {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    #showlist .show {
+      padding: 5px;
+    }
+
+    .breakexp time {
+      float:right;
+    }
+    .day {
+      font-size:0.9em;
+      font-style: italic;
+    }
+    .day .bill{
+      font-size:1.2em;
+      font-style: normal;
+    }
+    .clear {
+      clear: both;
+    }
+    .blockexp .show {
+      width: 360px;
+    }
+    .bill-block {
+      float: left;
+      width: 220px;
+      margin-right:20px;
+    }
+    .blockexp .details-block {
+      width: 120px;
+      float: right;
+      text-align: right;
+    }
+    .blockexp .bill .billitem {
+      display:block;
+      margin-left: 15px;
+      text-indent: -15px;
+    }
+    .blockexp .bill .billitem.billitem::first-line {
+      margin-left: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h1><a href="#">SF Showlist</a></h1>
+  <h2>Upcoming Shows</h2>
+
+  <ol id="showlist">
+    <li class="day">
+      <h3>Thursday, November 14, 2013</h3>
+      <ol>
+        <li class="show">
+          <span>
+            <span class="bill">
+              <span class="billitem">Swingin' Utters,</span>
+              <span class="billitem">Blacklist Royals,</span>
+              <span class="billitem">Threes Away</span>
+            </span>
+            at
+            <a class="venue" href="#">Red 7</a>
+            <span class="etc">(inside)</span>
+            <time>[9pm]</time>
+          </span>
+        </li>
+        <li class="show">
+          <span>
+            <span class="bill">
+              <span class="billitem">Keep Austin Live presents</span>
+              <span class="billitem">Gerald G,</span>
+              <span class="billitem">LNS Crew,</span>
+              <span class="billitem">Team Next,</span>
+              <span class="billitem">Die Slo,</span>
+              <span class="billitem">DJ Charlie</span>
+            </span>
+            at
+            <a class="venue" href="#">Flamingo Cantina</a>
+            <span class="etc">(21+)</span>
+            <time>[9pm]</time>
+          </span>
+        </li>
+        <li class="show">
+          <span>
+            <span class="bill">
+              <span class="billitem">The Zoltars (LP release),</span>
+              <span class="billitem">Grape Street,</span>
+              <span class="billitem">Simple Circuit,</span>
+              <span class="billitem">French Inhales,</span>
+              <span class="billitem">Maine Coons</span>
+            </span>
+            at
+            <a class="venue" href="#">Hotel Vegas (1500 E. 6th St.)</a>
+            <span class="etc"></span>
+            <time>[10pm]</time>
+          </span>
+        </li>
+        <li class="show">
+          <span>
+            <span class="bill">
+              <span class="billitem">Jonathan Tyler &amp; The Northern Lights,</span>
+              <span class="billitem">These Mad Dogs of Glory</span>
+            </span>
+            at
+            <a class="venue" href="#">Stubb's</a>
+            <span class="etc">(inside)</span>
+            <time>[10:30pm]</time>
+          </span>
+        </li>
+      </ol>
+    </li>
+
+
+    <div class="breakexp">
+    <li class="day">
+      <h3>Thursday, November 14, 2013</h3>
+      <ol>
+        <li class="show">
+          <span>
+            <div>
+              <span class="bill">
+                <span class="billitem">Swingin' Utters,</span>
+                <span class="billitem">Blacklist Royals,</span>
+                <span class="billitem">Threes Away</span>
+              </span>
+            </div>
+            <div>
+              at
+              <a class="venue" href="#">Red 7</a>
+              <span class="etc">(inside)</span>
+              <time>[9pm]</time>
+            </div>
+          </span>
+        </li>
+        <li class="show">
+          <span>
+            <div>
+              <span class="bill">
+                <span class="billitem">Keep Austin Live presents</span>
+                <span class="billitem">Gerald G,</span>
+                <span class="billitem">LNS Crew,</span>
+                <span class="billitem">Team Next,</span>
+                <span class="billitem">Die Slo,</span>
+                <span class="billitem">DJ Charlie</span>
+              </span>
+            </div>
+            <div>
+              at
+              <a class="venue" href="#">Flamingo Cantina</a>
+              <span class="etc">(21+)</span>
+              <time>[9pm]</time>
+            </div>
+          </span>
+        </li>
+        <li class="show">
+          <span>
+            <div>
+              <span class="bill">
+                <span class="billitem">The Zoltars (LP release),</span>
+                <span class="billitem">Grape Street,</span>
+                <span class="billitem">Simple Circuit,</span>
+                <span class="billitem">French Inhales,</span>
+                <span class="billitem">Maine Coons</span>
+              </span>
+            </div>
+            <div>
+              at
+              <a class="venue" href="#">Hotel Vegas (1500 E. 6th St.)</a>
+              <span class="etc"></span>
+              <time>[10pm]</time>
+            </div>
+          </span>
+        </li>
+        <li class="show">
+          <span>
+            <div>
+              <span class="bill">
+                <span class="billitem">Jonathan Tyler &amp; The Northern Lights,</span>
+                <span class="billitem">These Mad Dogs of Glory</span>
+              </span>
+            </div>
+            <div>
+              at
+              <a class="venue" href="#">Stubb's</a>
+              <span class="etc">(inside)</span>
+              <time>[10:30pm]</time>
+            </div>
+          </span>
+        </li>
+      </ol>
+    </li>
+    </div>
+
+    <div class="blockexp">
+    <li class="day">
+      <h3>Thursday, November 14, 2013</h3>
+      <ol>
+        <li class="show">
+          <div class="bill-block">
+            <span class="bill">
+              <span class="billitem">Swingin' Utters</span>
+              <span class="billitem">Blacklist Royals</span>
+              <span class="billitem">Threes Away</span>
+            </span>
+          </div>
+          <div class="details-block">
+            <a class="venue" href="#">Red 7</a><br/>
+            <span class="etc">(inside)</span><br/>
+            <time>[9pm]</time>
+          </div>
+          <div class="clear"></div>
+        </li>
+        <li class="show">
+          <div class="bill-block">
+            <span class="bill">
+              <span class="billitem">Keep Austin Live presents</span>
+              <span class="billitem">Gerald G</span>
+              <span class="billitem">LNS Crew</span>
+              <span class="billitem">Team Next</span>
+              <span class="billitem">Die Slo</span>
+              <span class="billitem">DJ Charlie</span>
+            </span>
+          </div>
+          <div class="details-block">
+            <a class="venue" href="#">Flamingo Cantina</a><br/>
+            <span class="etc">(21+)</span><br/>
+            <time>[9pm]</time><br/>
+          </div>
+          <div class="clear"></div>
+        </li>
+        <li class="show">
+          <div class="bill-block">
+            <span class="bill">
+              <span class="billitem">The Zoltars (LP release)</span>
+              <span class="billitem">Grape Street</span>
+              <span class="billitem">Simple Circuit</span>
+              <span class="billitem">French Inhales</span>
+              <span class="billitem">Maine Coons</span>
+            </span>
+          </div>
+          <div class="details-block">
+            <a class="venue" href="#">Hotel Vegas (1500 E. 6th St.)</a><br/>
+            <span class="etc"></span><br/>
+            <time>[10pm]</time><br/>
+          </div>
+          <div class="clear"></div>
+        </li>
+        <li class="show">
+          <div class="bill-block">
+            <span class="bill">
+              <span class="billitem">Jonathan Tyler &amp; The Northern Lights</span>
+              <span class="billitem">These Mad Dogs of Glory</span>
+            </span>
+          </div>
+          <div class="details-block">
+            <a class="venue" href="#">Stubb's</a><br/>
+            <span class="etc">(inside)</span><br/>
+            <time>[10:30pm]</time><br/>
+          </div>
+          <div class="clear"></div>
+        </li>
+        <li class="show"></li>
+      </ol>
+    </li>
+    </div>
+
+    <li class="day">
+      <h3>Thursday, November 14, 2013</h3>
+      <ol>
+        <li class="show">
+          <span>
+            <span class="bill">
+              Swingin' Utters,
+              Blacklist Royals,
+              Threes Away
+            </span>
+            at
+            <a class="venue" href="#">Red 7</a>
+            <span class="etc">(inside)</span>
+            <time>[9pm]</time>
+          </span>
+        </li>
+        <li class="show">
+          <span>
+            <span class="bill">
+              Keep Austin Live presents
+              Gerald G,
+              LNS Crew,
+              Team Next,
+              Die Slo,
+              DJ Charlie
+            </span>
+            at
+            <a class="venue" href="#">Flamingo Cantina</a>
+            <span class="etc">(21+)</span>
+            <time>[9pm]</time>
+          </span>
+        </li>
+        <li class="show">
+          <span>
+            <span class="bill">
+              The Zoltars (LP release), Grape Street, Simple Circuit, French Inhales, Maine Coons
+            </span>
+            at
+            <a class="venue" href="#">Hotel Vegas (1500 E. 6th St.)</a>
+            <span class="etc"></span>
+            <time>[10pm]</time>
+          </span>
+        </li>
+        <li class="show">
+          <span>
+            <span class="bill">
+              Jonathan Tyler &amp; The Northern Lights, These Mad Dogs of Glory
+            </span>
+            at
+            <a class="venue" href="#">Stubb's</a>
+            <span class="etc">(inside)</span>
+            <time>[10:30pm]</time>
+          </span>
+        </li>
+      </ol>
+    </li>
+  </ol>
+
+</body>
+</html>
+
