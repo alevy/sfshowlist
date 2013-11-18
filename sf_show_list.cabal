@@ -12,6 +12,7 @@ executable sf_show_list
   build-depends:
     base
     , aeson
+    , bytestring
     , transformers
     , old-locale
     , postgresql-orm
