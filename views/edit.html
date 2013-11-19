@@ -1,6 +1,7 @@
 <h2>Edit Show Listing</h2>
 
-<form action="/" method="POST" acceptCharset="UTF-8">
+<form action="/shows/$id$" method="POST" acceptCharset="UTF-8">
+  <input type="hidden" name="_method" value="PUT"/>
   <p>
     <label for="bill">
       Bill:

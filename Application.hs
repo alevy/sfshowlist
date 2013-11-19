@@ -2,6 +2,7 @@
 module Application where
 
 import SfShowList.Common
+import Network.Wai.Middleware.MethodOverridePost
 import Network.Wai.Middleware.Static
 import Web.Simple
 
@@ -11,7 +12,7 @@ app :: (Application -> IO ()) -> IO ()
 app runner = do
   settings <- newAppSettings
 
-  runner $ controllerApp settings $ do
+  runner $ methodOverridePost $ controllerApp settings $ do
     routeTop showsController
     routeName "shows" adminController
     fromApp $ staticPolicy (addBase "static") $ const $ return notFound
