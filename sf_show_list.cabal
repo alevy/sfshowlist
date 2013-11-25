@@ -8,11 +8,13 @@ cabal-version:       >=1.8
 
 executable sf_show_list
   main-is: Main.hs
-  ghc-options: -O2 -Wall
+  ghc-options: -O2 -Wall -fno-warn-unused-do-bind
   build-depends:
     base
     , aeson
+    , authenticate
     , bytestring
+    , http-conduit
     , transformers
     , old-locale
     , postgresql-orm

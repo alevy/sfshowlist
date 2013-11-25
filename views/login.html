@@ -1,0 +1,28 @@
+<div class="login_form">
+  <form action="/auth/login" method="GET">
+    <input type="hidden" name="openid_identifier"
+      value="https://www.google.com/accounts/o8/id" />
+      <input type="image" src="/images/google-signin.png"/>
+    <p>
+      <label for="invite_code">Invite Code:</label>
+      <input type="text" name="invite_code" id="invite_code"
+        placeholder="(optional)"/>
+    </p>
+  </form>
+  <hr/>
+  <p>or...</p>
+  <h2>Login with OpenId</h2>
+  <form action="/auth/login" method="GET">
+    <p>
+      <label for="invite_code">Invite Code:</label>
+      <input type="text" name="invite_code" id="invite_code"
+        placeholder="(optional)"/>
+    </p>
+    <p>
+      <label for="openid_identifier">OpenId:</label>
+      <input type="text" name="openid_identifier" id="openid_identifier"
+        placeholder="http://"/>
+      <input type="submit" value="Login"/>
+    </p>
+  </form>
+</div>

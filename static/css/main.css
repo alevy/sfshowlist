@@ -36,3 +36,9 @@ h2 {
   border
 }
 
+input#openid_identifier {
+  background: url('/images/openid-large.png') no-repeat scroll left center
+    transparent;
+  padding-left: 32px;
+  min-width: 50%;
+}
