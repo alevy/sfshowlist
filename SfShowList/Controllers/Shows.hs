@@ -9,6 +9,7 @@ import qualified Data.ByteString.Char8 as S8
 import Data.Text.Encoding
 import Data.Time
 import Database.PostgreSQL.ORM
+import SfShowList.Auth
 import SfShowList.Common
 import SfShowList.Models.Show
 import System.Locale
@@ -26,7 +27,7 @@ showsController = withConnection $ \db -> do
   render "index.html" $ groupShows shows
 
 adminController :: Controller AppSettings ()
-adminController = routeREST $ rest $ do
+adminController = requiresAdmin "/login" $ routeREST $ rest $ do
   new $ do
     render "new.html" ()
 

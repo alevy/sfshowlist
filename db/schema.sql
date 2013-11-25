@@ -25,6 +25,13 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 
+CREATE TABLE admins (
+    openid text,
+    invite_code character varying(4)
+);
+
+
+
 CREATE TABLE schema_migrations (
     version character varying(28)
 );
@@ -57,6 +64,16 @@ ALTER SEQUENCE show_id_seq OWNED BY show.id;
 
 
 ALTER TABLE ONLY show ALTER COLUMN id SET DEFAULT nextval('show_id_seq'::regclass);
+
+
+
+ALTER TABLE ONLY admins
+    ADD CONSTRAINT admins_invite_code_key UNIQUE (invite_code);
+
+
+
+ALTER TABLE ONLY admins
+    ADD CONSTRAINT admins_openid_key UNIQUE (openid);
 
 
 

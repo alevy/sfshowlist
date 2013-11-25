@@ -1,0 +1,16 @@
+<div class="login_form">
+  <h2>Login with OpenId</h2>
+  <form action="/auth/login" method="GET">
+    <p>
+      <label for="openid_identifier">OpenId:</label>
+      <input type="text" name="openid_identifier" id="openid_identifier"
+        placeholder="http://"/>
+    </p>
+    <p>
+      <label for="openid_identifier">Invite Code:</label>
+      <input type="text" name="invite_code" id="invite_code"
+        placeholder="(optional)"/>
+    </p>
+    <input type="submit" value="Login"/>
+  </form>
+</div>
